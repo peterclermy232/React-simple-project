@@ -17,14 +17,14 @@ export function FavoritesContextProvider(props) {
         });
     }
 
-    function removeFavoriteHandler(_meetupId) {
+    function removeFavoriteHandler(meetupId) {
         setUserFavorites(prevUserFavorites =>{
-            return prevUserFavorites.filter(meetup => meetup.id !== _meetupId);
+            return prevUserFavorites.filter(meetup => meetup.id !== meetupId);
         });
     }
 
-    function itemIsFavoriteHandler(_meetupId) {
-        return userFavorites.some(meetup => meetup.id === _meetupId)
+    function itemIsFavoriteHandler(meetupId) {
+        return userFavorites.some(meetup => meetup.id === meetupId)
     }
 
     const context = {

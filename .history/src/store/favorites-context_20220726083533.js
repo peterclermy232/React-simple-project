@@ -23,8 +23,8 @@ export function FavoritesContextProvider(props) {
         });
     }
 
-    function itemIsFavoriteHandler(_meetupId) {
-        return userFavorites.some(meetup => meetup.id === _meetupId)
+    function itemIsFavoriteHandler(meetupId) {
+        return userFavorites.some(meetup => meetup.id === meetupId)
     }
 
     const context = {
