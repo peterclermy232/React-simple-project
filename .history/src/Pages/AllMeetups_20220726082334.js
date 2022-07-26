@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import  MeetupList from '../components/meetups/MeetupList';
 
 function AllMeetupsPage() {
-    const [isLoading,setIsLoading] = useState(true);
+    //const [isLoading,setIsLoading] = useState(true);
     const [loadedMeetups,setLoadedMeetups] = useState([]);
 
     useEffect(()=>{
@@ -16,12 +16,19 @@ function AllMeetupsPage() {
     .then(data => {
         const meetups = [];
 
-        for 
+        for (const key in data){
+            const meetup = {
+                id: key,
+                ...data[key]
+            };
+
+            meetups.push(meetup);
+        }
 
 
 
         setIsLoading(false);
-        setLoadedMeetups(data);
+        setLoadedMeetups(meetups);
     });
 },[]);
 
