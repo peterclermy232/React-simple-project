@@ -6,13 +6,15 @@ import { Route, Routes } from 'react-router-dom'
 import AllMeetupsPage from './Pages/AllMeetups';
 import NewMeetupsPage from './Pages/NewMeetups';
 import FavoritesPage from './Pages/Favorites';
+import Layout from './layout/Layout';
 
 
 
 function App() {
   return (
-    <div>
+    <Layout>
       
+     /
       <Routes>
       <Route path='/' element={ <AllMeetupsPage />}/>
       <Route path='/new-meetup' element={<NewMeetupsPage />}/>
@@ -21,7 +23,7 @@ function App() {
         
       </Routes>
       
-    </div>
+    </Layout>
   );
 }
 
