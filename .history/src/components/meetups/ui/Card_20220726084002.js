@@ -1,10 +1,10 @@
 import React from 'react'
 import './Card.css'
 
-function Card() {
+/function Card(props) {
     return (
-        <div cla>
-            
+        <div className="card">
+            {props.children}
         </div>
     )
 }
