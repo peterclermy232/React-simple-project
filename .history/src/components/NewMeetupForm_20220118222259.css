@@ -1,0 +1,10 @@
+.form{
+    padding: 1rem;
+}
+.control{
+    margin-bottom: 0.5rem;
+}
+.control label{
+    display: block;
+    
+}
